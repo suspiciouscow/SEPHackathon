@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { availableCaretakers } from '../mockCaretakers'; // Importing the mock data
+import './CaretakerMatching.css'; // Optional CSS import
 
 const CaretakerMatching = () => {
   const [preferences, setPreferences] = useState({
