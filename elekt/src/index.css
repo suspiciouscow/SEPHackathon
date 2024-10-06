@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Navbar Styling */
+.navbar {
+  list-style: none;
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 14px 20px;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
+
+/* Caretaker Slider Styling */
+.caretaker-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.caretaker-images {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 80%; /* Limit the width of the scroll area */
+}
+
+.caretaker-images img {
+  width: 150px;  /* Set the width of each image */
+  height: 150px; /* Set the height of each image */
+  object-fit: cover; /* Make sure the image covers the area without distorting */
+  margin-right: 15px; /* Add space between images */
+  border-radius: 8px; /* Optional: adds rounded corners to the images */
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Caretaker Info Styling */
+.caretaker-info {
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.caretaker-info h3 {
+  font-size: 20px;
+}
+
+.caretaker-info p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Profile Form Styling */
+.profile-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.profile-form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-form button:hover {
+  background-color: #555;
 }
