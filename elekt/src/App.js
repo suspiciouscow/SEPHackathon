@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import CreateProfile from './components/CreateProfile';
 import elekt from './components/elekt.png'; 
+import PastLog from './components/PastLog';
 // import photo from 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/create-profile" element={<CreateProfile />} />
+          <Route path="/past-log" element={<PastLog />} /> {/* Past Logs route */}
         </Routes>
       </div>
     </Router>
