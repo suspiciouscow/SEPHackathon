@@ -44,6 +44,14 @@ body {
     resize: none;
   }
   
+  /* Flexbox container for the buttons */
+  .log-button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Adds space between buttons */
+    margin-top: 20px;
+  }
+  
   .log-button {
     background-color: orange;
     color: white;
@@ -52,14 +60,8 @@ body {
     font-size: 1.2em;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
-  
-    /* Center the button */
-    display: block;
-    margin: 20px auto; /* Ensures the button is centered */
   }
   
   .log-button:hover {
     background-color: #ff7b00;
   }
-  
