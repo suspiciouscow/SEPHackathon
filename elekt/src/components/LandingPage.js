@@ -1,6 +1,6 @@
-// components/LandingPage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import CaretakerCaring from '../pages/images/CaretakerCaring.png';
 
 const LandingPage = () => {
   const navigate = useNavigate(); // Initialize useNavigate hook
@@ -19,9 +19,12 @@ const LandingPage = () => {
           .custom-banner {
             display: flex;
             align-items: center;
-            height: 5.5in; /* Set the desired height */
+            justify-content: space-between;
+            height: auto; /* Adjust height for responsiveness */
+            min-height: 400px; /* Set a minimum height */
             background-color: orange; /* Background color for the text side */
             color: black;
+            padding: 20px;
           }
 
           .banner-text {
@@ -34,25 +37,48 @@ const LandingPage = () => {
           }
 
           .main-text {
-            font-size: 4rem;
+            font-size: 3rem; /* Slightly smaller for better balance */
             font-weight: bold;
             margin: 0;
           }
 
           .sub-text {
             font-size: 1.5rem;
-            margin: 0;
+            margin: 10px 0 0;
           }
 
           .banner-image {
             flex: 1;
-            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           .banner-image img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            height: auto;
             object-fit: cover;
+            border-radius: 10px;
+          }
+
+          /* For smaller screens */
+          @media (max-width: 768px) {
+            .custom-banner {
+              flex-direction: column; /* Stack the text and image vertically on small screens */
+              text-align: center;
+            }
+
+            .banner-text {
+              padding: 10px;
+            }
+
+            .main-text {
+              font-size: 2.5rem;
+            }
+
+            .banner-image {
+              margin-top: 20px;
+            }
           }
         `}
       </style>
@@ -64,7 +90,7 @@ const LandingPage = () => {
           <p className="sub-text">CONNECTING FAMILIES ACROSS THE GLOBE</p>
         </div>
         <div className="banner-image">
-          <img src="../pages/images/CaretakerCaring.png" alt="Caretaker caring for elderly" />
+          <img src={CaretakerCaring} alt="Caretaker caring for elderly" />
         </div>
       </div>
 
@@ -150,11 +176,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-
-
-
-
-
-
-
-

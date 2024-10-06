@@ -5,6 +5,8 @@ import Dashboard from './components/Dashboard';
 import About from './components/About';
 import Contact from './components/Contact';
 import CreateProfile from './components/CreateProfile';
+import elekt from './components/elekt.png'; 
+// import photo from 
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
             <li>
               {/* Logo link to the landing page */}
               <Link to="/">
-                <img src="logo.png" alt="ELEKT Logo" style={{fontFamily: 'Arial, sans-serif', width: '50px', height: '50px' }} /> {/* Add your logo image */}
+                <img src= {elekt} alt="ELEKT Logo" style={{fontFamily: 'Arial, sans-serif', width: 'auto', height: '50px' }} /> {/* Add your logo image */}
               </Link>
             </li>
             <li><Link to="/home">Home</Link></li>
