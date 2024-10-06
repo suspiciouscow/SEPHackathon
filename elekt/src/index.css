@@ -1,7 +1,7 @@
 /* Navbar Styling */
 .navbar {
   list-style: none;
-  background-color: #333;
+  background-color: #ff6600; /* Orange background */
   display: flex;
   justify-content: space-around;
   padding: 15px 0;
@@ -12,7 +12,7 @@
 }
 
 .navbar a {
-  color: white;
+  color: white; /* White text */
   text-decoration: none;
   font-size: 18px;
   padding: 14px 20px;
@@ -20,7 +20,7 @@
 }
 
 .navbar a:hover {
-  background-color: #575757;
+  background-color: #ff944d; /* Lighter orange on hover */
   border-radius: 4px;
 }
 
@@ -36,19 +36,20 @@
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  width: 80%; /* Limit the width of the scroll area */
+  width: 80%;
 }
 
 .caretaker-images img {
-  width: 150px;  /* Set the width of each image */
-  height: 150px; /* Set the height of each image */
-  object-fit: cover; /* Make sure the image covers the area without distorting */
-  margin-right: 15px; /* Add space between images */
-  border-radius: 8px; /* Optional: adds rounded corners to the images */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 8px;
 }
 
+/* Button Styling */
 button {
-  background-color: #333;
+  background-color: #ff6600; /* Orange background */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -56,7 +57,7 @@ button {
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #ff944d; /* Lighter orange on hover */
 }
 
 /* Caretaker Info Styling */
@@ -68,6 +69,7 @@ button:hover {
 
 .caretaker-info h3 {
   font-size: 20px;
+  color: #ff6600; /* Orange text */
 }
 
 .caretaker-info p {
@@ -85,6 +87,7 @@ button:hover {
   display: block;
   margin-bottom: 5px;
   font-size: 16px;
+  color: #e4630d; /* Orange text for labels */
 }
 
 .profile-form input {
@@ -97,7 +100,7 @@ button:hover {
 
 .profile-form button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #e8640b; /* Orange background */
   color: white;
   border: none;
   border-radius: 5px;
@@ -105,7 +108,7 @@ button:hover {
 }
 
 .profile-form button:hover {
-  background-color: #555;
+  background-color: #ff944d; /* Lighter orange */
 }
 
 .profile-list {
@@ -116,7 +119,7 @@ button:hover {
 
 .profile-item {
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 10px;  
   border-radius: 8px;
   text-align: center;
 }
