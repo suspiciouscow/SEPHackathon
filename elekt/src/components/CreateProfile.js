@@ -1,26 +1,35 @@
 import React from 'react';
+import './profile.css';
 
 const CreateProfile = () => {
   return (
     <div>
-      <h1>Create Your Profile</h1>
-      <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+      <h1>Daily Log</h1>
+      <div className="log-section">
+        <h2>Medication Log</h2>
+        <ul>
+          <li>Morning: <input type="checkbox" /></li>
+          <li>Afternoon: <input type="checkbox" /></li>
+          <li>Evening: <input type="checkbox" /></li>
+        </ul>
+      </div>
+      
+      <div className="log-section">
+        <h2>Sleep Log</h2>
+        <label htmlFor="sleep-hours">Hours slept:</label>
+        <input type="number" id="sleep-hours" name="sleep-hours" min="0" max="24" />
+      </div>
+      
+      <div className="log-section">
+        <h2>Comments</h2>
+        <textarea id="comments" name="comments" rows="4" placeholder="Any other thoughts for today..."></textarea>
+      </div>
 
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label htmlFor="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-
-        <label htmlFor="profile-picture">Profile Picture:</label>
-        <input type="file" id="profile-picture" name="profile-picture" />
-
-        <button type="submit">Create Profile</button>
-      </form>
+      <button type="submit" className="log-button">Save Log</button>
     </div>
   );
 };
+
+
 
 export default CreateProfile;

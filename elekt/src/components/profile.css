@@ -1,0 +1,70 @@
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center horizontally */
+    justify-content: center;  /* Center vertically */
+    height: 100vh;  /* Full viewport height */
+    text-align: center;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+  }
+  
+  .log-section {
+    width: 60%;
+    max-width: 600px; /* Set a maximum width to prevent it from expanding too much */
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px auto; /* Center each container horizontally */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;  /* Keep the text inside aligned to the left */
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .log-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .log-button:hover {
+    background-color: #ff7b00;
+  }
+  
