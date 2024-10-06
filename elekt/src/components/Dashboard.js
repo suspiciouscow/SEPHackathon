@@ -2,14 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, addDoc, getDocs } from 'firebase/firestore'; // Firestore functions
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'; // Storage functions
 import { db, storage } from '../firebase'; // Import Firestore and Storage instances
-
-
 import '../index.css';
-import Caretaker1 from "../pages/images/caretaker1.jpg";
-import Caretaker2 from "../pages/images/caretaker2.jpg";
-import Caretaker3 from "../pages/images/caretaker3.jpg";
-import Caretaker4 from "../pages/images/caretaker4.jpg";
-import Caretaker5 from "../pages/images/caretaker5.jpg";
 
 const Dashboard = () => {
   // State to capture form data
@@ -32,14 +25,26 @@ const Dashboard = () => {
         const storageRef = ref(storage, `profile_pictures/${profilePicture.name}`);
         const uploadTask = uploadBytesResumable(storageRef, profilePicture);
 
-        await new Promise((resolve, reject) => {
+        // Use a promise to track the state of the upload
+        imageUrl = await new Promise((resolve, reject) => {
           uploadTask.on(
             "state_changed",
-            null,
-            (error) => reject(error),
+            (snapshot) => {
+              // Track upload progress here if needed
+              const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+              console.log(`Upload is ${progress}% done`);
+            },
+            (error) => {
+              // Handle unsuccessful uploads
+              console.error('Upload failed:', error);
+              setMessage('Error uploading the profile picture.');
+              reject(error);
+            },
             async () => {
-              imageUrl = await getDownloadURL(uploadTask.snapshot.ref); // Get image URL
-              resolve();
+              // Handle successful uploads
+              const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+              console.log('File available at', downloadURL);
+              resolve(downloadURL);
             }
           );
         });
@@ -82,6 +87,21 @@ const Dashboard = () => {
 
   return (
     <div>
+      {/* Display Profiles with Images ABOVE the form */}
+      <div className="profile-list">
+        <h2>Existing Profiles</h2>
+        {profiles.map((profile, index) => (
+          <div key={index} className="profile-item">
+            {profile.profilePictureUrl && (
+              <img src={profile.profilePictureUrl} alt="Profile" width="100" height="100" />
+            )}
+            <h3>{profile.name}</h3>
+            <p>{profile.email}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Profile creation form */}
       <h2>Create Your Profile</h2>
       <form onSubmit={handleProfileSubmit}>
         <label>Name:</label>
@@ -118,20 +138,6 @@ const Dashboard = () => {
       </form>
 
       {message && <p>{message}</p>}
-
-      {/* Display Profiles with Images */}
-      <div className="profile-list">
-        <h2>Existing Profiles</h2>
-        {profiles.map((profile, index) => (
-          <div key={index} className="profile-item">
-            {profile.profilePictureUrl && (
-              <img src={profile.profilePictureUrl} alt="Profile" width="100" height="100" />
-            )}
-            <h3>{profile.name}</h3>
-            <p>{profile.email}</p>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

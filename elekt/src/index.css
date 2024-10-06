@@ -107,3 +107,20 @@ button:hover {
 .profile-form button:hover {
   background-color: #555;
 }
+
+.profile-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.profile-item img {
+  border-radius: 50%;
+}
