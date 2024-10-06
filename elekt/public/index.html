@@ -3,69 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="descrition"
+    content="web site created using create-react-app" />
   <title>Caretaker Matching</title>
   <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <ul class="navbar">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#profile">Create Profile</a></li>
-    </ul>
-  </nav>
-
-  <!-- Caretaker Slider Section -->
-  <section id="caretakers">
-    <h2>Our Caretakers</h2>
-    <div class="caretaker-slider">
-        <button class="left-arrow">◀</button>
-        <div class="caretaker-images">
-          <img src="images/caretaker1.jpg" alt="Caretaker 1">
-          <img src="images/caretaker2.jpg" alt="Caretaker 2">
-          <img src="images/caretaker3.jpg" alt="Caretaker 3">
-          <img src="images/caretaker4.jpg" alt="Caretaker 4">
-          <img src="images/caretaker5.jpg" alt="Caretaker 5">
-        </div>
-        <button class="right-arrow">▶</button>
-    </div>
-
-    
-      
-
-    <!-- Text Section Below Images -->
-    <div class="caretaker-info">
-      <h3>Caretaker Name</h3>
-      <p>Availability: Full-time</p>
-      <p>Experience: 5 years</p>
-      <p>Skills: Medication Management, Personal Care, Cooking</p>
-    </div>
-  </section>
-
-  <!-- Profile Creation Section -->
-  <section id="profile">
-    <h2>Create Your Profile</h2>
-    <div class="profile-form">
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <label for="profile-picture">Profile Picture:</label>
-        <input type="file" id="profile-picture" name="profile-picture">
-
-        <button type="submit">Create Profile</button>
-      </form>
-    </div>
-  </section>
-
-  <script src="script.js"></script> <!-- Link to JavaScript file -->
+  <div id="root"></div>
+  <script src="App.js"></script> <!-- Link to JavaScript file -->
 </body>
 </html>
