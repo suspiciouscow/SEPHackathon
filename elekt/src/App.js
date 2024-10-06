@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import About from './components/About';
 import Contact from './components/Contact';
 import CreateProfile from './components/CreateProfile';
+import PastLog from './components/PastLog';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
             <li>
               {/* Logo link to the landing page */}
               <Link to="/">
-                <img src="logo.png" alt="ELEKT Logo" style={{fontFamily: 'Arial, sans-serif', width: '50px', height: '50px' }} /> {/* Add your logo image */}
+                <img src="logo.png" alt="ELEKT Logo" style={{ width: '50px', height: '50px' }} /> {/* Make sure the path to logo is correct */}
               </Link>
             </li>
             <li><Link to="/home">Home</Link></li>
@@ -33,6 +34,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/create-profile" element={<CreateProfile />} />
+          <Route path="/past-log" element={<PastLog />} /> {/* Past Logs route */}
         </Routes>
       </div>
     </Router>
