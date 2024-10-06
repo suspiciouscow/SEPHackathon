@@ -13,6 +13,61 @@ const LandingPage = () => {
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif' }}>
+      {/* Inline CSS for the banner */}
+      <style>
+        {`
+          .custom-banner {
+            display: flex;
+            align-items: center;
+            height: 5.5in; /* Set the desired height */
+            background-color: orange; /* Background color for the text side */
+            color: black;
+          }
+
+          .banner-text {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          .main-text {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0;
+          }
+
+          .sub-text {
+            font-size: 1.5rem;
+            margin: 0;
+          }
+
+          .banner-image {
+            flex: 1;
+            overflow: hidden;
+          }
+
+          .banner-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        `}
+      </style>
+
+      {/* Custom Banner Section */}
+      <div className="custom-banner">
+        <div className="banner-text">
+          <p className="main-text">WE LOVE HELPING PEOPLE HELP PEOPLE</p>
+          <p className="sub-text">CONNECTING FAMILIES ACROSS THE GLOBE</p>
+        </div>
+        <div className="banner-image">
+          <img src="../pages/images/CaretakerCaring.png" alt="Caretaker caring for elderly" />
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section style={{ backgroundColor: '#eef2f5', padding: '50px 20px', textAlign: 'center' }}>
         <h1 style={{ fontSize: '2.5rem', margin: '20px 0' }}>Find the Perfect Caregiver</h1>
@@ -95,5 +150,11 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+
+
+
+
+
 
 
