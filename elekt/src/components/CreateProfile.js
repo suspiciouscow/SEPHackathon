@@ -25,7 +25,7 @@ const CreateProfile = () => {
         <textarea id="comments" name="comments" rows="4" placeholder="Any other thoughts for today..."></textarea>
       </div>
 
-      <button type="submit" className="log-button">Save Log</button>
+        <button type="submit" className="log-button">Save Log</button>
     </div>
   );
 };

@@ -16,13 +16,13 @@ function App() {
             <li>
               {/* Logo link to the landing page */}
               <Link to="/">
-                <img src="logo.png" alt="ELEKT Logo" style={{ width: '50px', height: '50px' }} /> {/* Add your logo image */}
+                <img src="logo.png" alt="ELEKT Logo" style={{fontFamily: 'Arial, sans-serif', width: '50px', height: '50px' }} /> {/* Add your logo image */}
               </Link>
             </li>
             <li><Link to="/home">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/create-profile">Profile</Link></li>
+            <li><Link to="/create-profile">Log</Link></li>
           </ul>
         </nav>
 
